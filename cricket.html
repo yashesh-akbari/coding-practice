@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <style>
+    body{
+        text-align: center;
+    }
+   </style>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Bat Ball Stump Game</h1>
+    <button onclick="
+    console.log('you choose bat');
+    let random_number =math.random() * 3;
+    if(random_number>0 && random_number<1)
+    {
+        let computerChoice ='Bat';
+        console.log('computer choose bat get tie');
+    }
+    else if(random_number>1 && random_number<2)
+    { 
+        let computerChoice ='ball';
+        console.log('computer choose ball you win');
+    }
+    else
+    {
+        let computerChoice ='Stump';
+        console.log('computer choose Stump you loose');
+    }
+    ">Bat</button>
+    <button onclick="
+    console.log('you choose ball');
+    if(random_number>0 && random_number<1)
+    {
+        console.log('computer choose bat get computer win');
+    }
+    else if(random_number>1 && random_number<2)
+    {
+        console.log('computer choose ball get tie');
+    }
+    else
+    {
+        console.log('computer choose Stump you win');
+    }
+    ">Ball</button>
+    <button onclick="
+    console.log('you choose Stump');
+    if(random_number>0 && random_number<1)
+    {
+        console.log('computer choose bat get computer loose');
+    }
+    else if(random_number>1 && random_number<2)
+    {
+        console.log('computer choose ball get computer win');
+    }
+    else
+    {
+        console.log('computer choose Stump get tie');
+    }
+    ">Stump</button>
+</body>
+</html>
