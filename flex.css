@@ -1,0 +1,32 @@
+.parent{
+  background-color: aqua;
+  height: 100%;
+  width:100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+ /* flex-direction: column; */
+}
+.child1,.child2,.child3{
+  background-color: red;
+  height: 100px;
+  width: 100px;
+  border-radius: 5px;
+  border: 5px solid black;
+  text-align: center;
+  justify-content: center;
+  text-wrap: wrap;
+}
+
+*{
+  background-color: aqua;
+  margin-top: 10px;
+}
+
+@media (max-width:600px) {
+  .child1,.child2,.child3{
+    background-color: chartreuse;
+    border-radius: 50%;
+  }
+}

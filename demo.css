@@ -1,0 +1,14 @@
+.nav{
+  background-color: aqua;
+}
+
+.nav .logo{
+  font-size: 7vw;
+  font-weight: bold;
+}
+
+@media (max-wight: 600px) {
+  .logo{
+    font-size: 7vw;
+  }
+}
