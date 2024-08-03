@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,7 +12,7 @@
 </head>
 
 <body>
-  <header><button name="logout" value="logout"></button></header>
+  <header><input type="submit" name="logout" value="logout"></input></header>
   <form action="home.php" method="post">
     <h1>this is home page</h1>
     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque aliquid, eos exercitationem deserunt fuga optio quo autem suscipit beatae praesentium ea maiores officia. Fugiat, consectetur? Itaque minima modi, esse at repellat voluptate, reiciendis sequi deserunt aspernatur adipisci corrupti impedit numquam in assumenda eaque eveniet delectus debitis distinctio quibusdam provident. Repellat.</p>

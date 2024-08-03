@@ -17,8 +17,10 @@ session_start();
 <body>
   <form action="index.php" method="post">
     username: <input type="text" name="username">
+    <br>
     password: <input type="password" name="password">
-    <input type="submit" value="login">
+    <br>
+    <input type="submit" name="login" value="login">
   </form>
 </body>
 
@@ -28,17 +30,9 @@ if (isset($_POST["login"])) {
   if (!empty($_POST["username"]) && !empty($_POST["password"])) {
     $_SESSION["username"] = $_POST["username"];
     $_SESSION["password"] = $_POST["password"];
-
-
-    echo "login successful!!!";
-    echo $_SESSION["username"];
-    echo $_SESSION["password"];
-
     header("Location: home.php");
   } else {
     echo "username or password are missing!!!";
   }
-} else {
-  echo "username or password are missing!!!";
 }
 ?>
