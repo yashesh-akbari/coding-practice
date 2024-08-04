@@ -1,8 +1,6 @@
 <?php
+include("database.php");
 
-// session = 5GB used to store information on a user to be used across mutiple pages.
-// A user is assigned a session-id ex. login credentials
-session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,29 +8,35 @@ session_start();
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- login form example understand the session method -->
-  <title>Login Form</title>
+  <title>Document</title>
 </head>
 
 <body>
-  <form action="index.php" method="post">
-    username: <input type="text" name="username">
+  <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post">
+    <h2>welcome to l</h2>
+    username:<br>
+    <input type="text" name="username" id="">
     <br>
-    password: <input type="password" name="password">
+    password:<br>
+    <input type="text" name="password" id="">
     <br>
-    <input type="submit" name="login" value="login">
+    <input type="submit" value="Register">
   </form>
 </body>
 
 </html>
 <?php
-if (isset($_POST["login"])) {
-  if (!empty($_POST["username"]) && !empty($_POST["password"])) {
-    $_SESSION["username"] = $_POST["username"];
-    $_SESSION["password"] = $_POST["password"];
-    header("Location: home.php");
+if ($_SERVER["REQUST_METHOD"] == "POST") {
+  $username = filter_input(INPUT_POST, "username", FILTER_SANITIZE_SPECIAL_CHARS);
+  $password = filter_input(INPUT_POST, "password", FILTER_SANITIZE_SPECIAL_CHARS);
+
+  if (empty($username)) {
+    echo "please enter a username";
+  } elseif (empty($password)) {
+    echo "please enter a password";
   } else {
-    echo "username or password are missing!!!";
+    $hash = password_hash($password, PASSWORD_DEFAULT);
+    $sql = "INSERT INTO users (user,password) VALUES ('$username','$hash')";
   }
 }
 ?>
