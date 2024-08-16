@@ -18,5 +18,11 @@ public class p1 {
 //        System.out.println("    * * *");
 //        System.out.println("  * * * *");
 //        System.out.println("* * * * *");
+
+        System.out.println("*");
+        System.out.println("* *");
+        System.out.println("* * *");
+        System.out.println("* * * *");
+        System.out.println("* * * * *");
     }
 }
