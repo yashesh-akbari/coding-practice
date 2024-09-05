@@ -1,25 +1,32 @@
+
+-- show databases;
 -- use db1;
--- SHOW tables;
--- create table movies(title varchar(20),year int(4),rating 
--- float(4));
--- insert into movies values("the god",1972,9.2);
--- insert into movies values("the martrix",1999,8.7);
--- insert into movies values("alien",1979,8.4);
--- Select * from movies WHERE rating>8 or year<1980;
--- insert into movies values("alien",1979,8.4);
--- select distinct * from movies;
--- delete from movies where rating=8.4 and year=1979;
--- DELETE FROM movies where rating=8.4
--- select * from movies order by rating ASC;
--- select title as Movies_name from movies;
+-- show tables;
+-- create table city(name varchar(20),email_id varchar(20),country varchar(20));
+-- select * from city;
 
-/* delete and inquailty not work */
--- delete from movies where rating=8.4;
--- update movies set year=1980 where title="the god";
- 
- -- alter
- -- alter table movies rename COLUMN title to movie_name;
---  alter table movies add id int;
--- alter table movies drop column id;
-select * from movies;
+-- insert the values in table
+-- insert into city values ("yashesh","yashesh@mail.co","india");
+-- insert into city values ("sam","sam@mail.co","india");
+-- insert into city values ("remy","rem@mail.co","france");
+-- insert into city values ("luis","lusi@mail.co","england");
 
+-- distinct pratices
+-- select distinct * from city;
+-- select distinct country from city order by country desc;
+-- select * from city where country <> "france";
+
+-- alter opration
+-- alter table city rename column name to NAME;
+-- alter table city add column id int;
+-- alter table city drop column id; 
+
+
+-- select * from city where country like '%i%';
+-- select * from city where country in ("india","france");
+-- select * from city where country="india" and NAME="yashesh";
+-- select * from city where country="india" or NAME="yashesh";
+-- select * from city where not country="india";
+-- select count(distinct country) as country_no from city;
+-- select country,count(*) from city group by country;
+select * from city where country having ("india");
